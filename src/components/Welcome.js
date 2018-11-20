@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
@@ -62,7 +61,7 @@ class Welcome extends Component {
                 The big picture
               </Typography>
               <Typography variant="button" gutterBottom color="primary">
-                  1. JavaScript and React fundamental consepts.
+                  1. Cover JavaScript fundamental consepts.
               </Typography>
               <Typography variant="button" gutterBottom color="primary">
                   2. Work on challanges based on fundamentals.
