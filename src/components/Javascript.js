@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ValuesVar from './ValuesVar';
+import Objects from './Objects';
+import Arrays from './Arrays';
 import ES6 from './ES6';
-import DataType from './DataType';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -8,8 +10,11 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
-  main: {
+  label: {
     display: 'inline-flex',
+  },
+  info: {
+    display: 'inline-block',
   },
   button: {
     margin: theme.spacing.unit,
@@ -41,19 +46,45 @@ const theme = createMuiTheme({
 
 class Javascript extends Component {
   state = {
+    openValuesVar: true,
+    openObjects: true,
+    openArrays: true,
     openES6: true,
-    openDataType: true,
   };
 
-  handleES6 = () => {
+  handleValuesVar = () => {
     this.setState({
-      openES6: !this.state.openES6
+      openValuesVar: !this.state.openValuesVar,
+      openObjects: true,
+      openArrays: true,
+      openES6: true,
     })
   }
 
-  handleDataType = () => {
+  handleObjects = () => {
     this.setState({
-      openDataType: !this.state.openDataType
+      openValuesVar: true,
+      openObjects: !this.state.openObjects,
+      openArrays: true,
+      openES6: true,
+    })
+  }
+
+  handleArrays = () => {
+    this.setState({
+      openValuesVar: true,
+      openObjects: true,
+      openArrays: !this.state.openArrays,
+      openES6: true,
+    })
+  }
+
+  handleES6 = () => {
+    this.setState({
+      openValuesVar: true,
+      openObjects: true,
+      openArrays: true,
+      openES6: !this.state.openES6,
     })
   }
 
@@ -72,27 +103,48 @@ class Javascript extends Component {
             close
           </Button>
           <h1>Learning JavaScript</h1>
-          <div className={classes.main}>
-            <Button
-              variant="outlined"
-              color="primary"
-              className={classes.button}
-              onClick={this.handleES6}
-            >
-              {this.state.openES6 ? 'Open' : 'Close'} ES6
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              className={classes.button}
-              onClick={this.handleDataType}
-            >
-              {this.state.openDataType ? 'Open' : 'Close'} DataType
-            </Button>
-            <div>
-              {!this.state.openES6 && <ES6 />}
-              {!this.state.openDataType && <DataType />}
-            </div>  
+          <div>
+            <div className={classes.label}>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={classes.button}
+                onClick={this.handleValuesVar}
+              >
+                values + variables
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={classes.button}
+                onClick={this.handleObjects}
+              >
+                objects
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={classes.button}
+                onClick={this.handleArrays}
+              >
+                array
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={classes.button}
+                onClick={this.handleES6}
+              >
+                ES6
+              </Button>
+            </div>
+            <br/>
+            <div className={classes.info}>
+              {!this.state.openValuesVar && <ValuesVar close={this.handleValuesVar}/>}
+              {!this.state.openObjects && <Objects close={this.handleObjects}/>}
+              {!this.state.openArrays && <Arrays close={this.handleArrays}/>}
+              {!this.state.openES6 && <ES6 close={this.handleES6}/>}
+            </div>
           </div>
         </MuiThemeProvider>
       </div>
