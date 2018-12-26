@@ -3,6 +3,7 @@ import ValuesVar from './ValuesVar';
 import Objects from './Objects';
 import Arrays from './Arrays';
 import ES6 from './ES6';
+import BigO from './BigO';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -50,6 +51,7 @@ class Javascript extends Component {
     openObjects: true,
     openArrays: true,
     openES6: true,
+    openBigO: true,
   };
 
   handleValuesVar = () => {
@@ -85,6 +87,15 @@ class Javascript extends Component {
       openObjects: true,
       openArrays: true,
       openES6: !this.state.openES6,
+    })
+  }
+
+  handleBigO = () => {
+    this.setState({
+      openValuesVar: true,
+      openObjects: true,
+      openArrays: true,
+      openBigO: !this.state.openBigO,
     })
   }
 
@@ -137,6 +148,14 @@ class Javascript extends Component {
               >
                 ES6
               </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={classes.button}
+                onClick={this.handleBigO}
+              >
+                Big O
+              </Button>
             </div>
             <br/>
             <div className={classes.info}>
@@ -144,6 +163,7 @@ class Javascript extends Component {
               {!this.state.openObjects && <Objects close={this.handleObjects}/>}
               {!this.state.openArrays && <Arrays close={this.handleArrays}/>}
               {!this.state.openES6 && <ES6 close={this.handleES6}/>}
+              {!this.state.openBigO && <BigO close={this.handleBigO}/>}
             </div>
           </div>
         </MuiThemeProvider>
