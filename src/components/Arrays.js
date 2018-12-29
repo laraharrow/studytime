@@ -32,6 +32,12 @@ const styles = theme => ({
   dark: {
     color: "#00352c",
   },
+  code: {
+    color: "#5b874b",
+    textAlign: 'left',
+    fontFamily: "Courier New",
+    fontSize: 16,
+  },
 });
 
 const Arrays = (props) => {
@@ -65,36 +71,36 @@ const Arrays = (props) => {
           </strong>
           <br/>
           <br/>
-          <span className={classes.light}>{'arr0 = [1, 2, 3];'}</span>
+          <strong className={classes.code}>{'arr0 = [1, 2, 3];'}</strong>
           <br/>
-          <span className={classes.light}>{"arr1 = ['a', 'B', 'abc'];"}</span>
+          <strong className={classes.code}>{"arr1 = ['a', 'B', 'abc'];"}</strong>
           <br/>
-          <span className={classes.light}>{"arr2 = [true, {a: 1}, 'hello', 'world'];"}</span>
+          <strong className={classes.code}>{"arr2 = [true, {a: 1}, 'hello', 'world'];"}</strong>
           <br/>
           <br/>
-          <strong className={classes.light}>{'arr0.push({q: false}'})</strong>
-          <br/>
-          The push method add the passed element(s) to the end of the array.
+          The <strong className={classes.light}>.push( )</strong>  method add the passed element(s) to the end of the array.
           <br/>
           Use <strong className={classes.light}>.unshift( )</strong> to add element(s) to the beginning of the array.
           <br/>
-          In this case arr0 will become:
           <br/>
-          <span className={classes.light}>{'arr0 = [1, 2, 3, {q: false}];'}</span>
+          <strong className={classes.code}>{'arr0.push({q: false}'})</strong>
+          <br/>
+          // In this case arr0 will become:
+          <br/>
+          <strong className={classes.code}>{'arr0 = [1, 2, 3, {q: false}];'}</strong>
           <br/>
           <br/>
-          <strong className={classes.light}>arr1.pop( )</strong>
-          <br/>
-          The pop method remove the last item in the array.
+          The <strong className={classes.light}>.pop( )</strong> method remove the last item in the array.
           <br/>
           Use <strong className={classes.light}>.shift( )</strong> to remove element(s) from the beginning of the array.
           <br/>
-          The code above would remove the last element on arr1 and that will now become:
           <br/>
-          <span className={classes.light}>{"arr1 = [a, 'B'];"}</span>
+          <strong className={classes.code}>arr1.pop( )</strong>
           <br/>
+          // The code above would remove the last element on arr1 and that will now become:
           <br/>
-          <strong className={classes.light}>var new2 = arr2.slice(1, 3)</strong>
+          <strong className={classes.code}>{"arr1 = [a, 'B'];"}</strong>
+          <br/>
           <br/>
           The slice method returns a new array that has the elements from index of the first arguemnt until index of the second argument minus one.
           <br/>
@@ -104,24 +110,26 @@ const Arrays = (props) => {
           <br/>
           After using the method slice on arr2 nothing changes on arr2 but the variable that we set <span className={classes.light}>new2</span> will become:
           <br/>
-          <span className={classes.light}>{"new2 = [{a: 1}, 'hello'];"}</span>
+          <strong className={classes.code}>var new2 = arr2.slice(1, 3)</strong>
+          <br/>
+          <strong className={classes.code}>{"new2 = [{a: 1}, 'hello'];"}</strong>
           <br/>
           <br/>
-          <span className={classes.light}>var collection = </span> <strong className={classes.light}>arr0.concat( arr1, arr2)</strong>
+          The code below will return a new array that has all the elements inside all passed arrays and the new array is store on the variable passed, in this case collection.
           <br/>
-          the code above will return a new array that has all the elements inside all passed arrays and the new array is store on the variable passed, in this case collection.
+          <strong className={classes.code}>var collection = arr0.concat( arr1, arr2)</strong>
           <br/>
-          <span className={classes.light}>{"collection = [1, 2, 3, 4, 'a', 'B', true, {a: 1}];"}</span>
-          <br/>
-          <br/>
-          <strong className={classes.light}>arr0.indexOf(1)</strong>
-          <br/>
-          looks for the element passed as the first argument and start at the passed second element, if the segond element is not passed it will iterate the whole array. It returns the index where it was found, otherwise -1.
-          <br/>
-          In this case the return value would be: <span className={classes.light}>0</span> since the interger 1 is at position 0 inside arr0.
+          <strong className={classes.code}>{"collection = [1, 2, 3, 4, 'a', 'B', true, {a: 1}];"}</strong>
           <br/>
           <br/>
-          <strong className={classes.light}>Array.isArray(arr)</strong>
+          <strong className={classes.code}>arr0.indexOf(1)</strong>
+          <br/>
+          the code above looks for the element passed as the first argument and start at the passed second element, if the segond element is not passed it will iterate the whole array. It returns the index where it was found, otherwise -1.
+          <br/>
+          In this case the return value would be: 0. Since the interger 1 is at position 0 inside arr0.
+          <br/>
+          <br/>
+          <strong className={classes.code}>Array.isArray(arr)</strong>
           <br/>
           Sinse Arrays in JS are sintatically an objects, one good way to conform if the data you are using is indeed an array is by using the IsArray method, the return value of that metod is true or false.
           <br/>
@@ -138,26 +146,29 @@ const Arrays = (props) => {
         <Typography className={classes.align} variant="body1" gutterBottom>
           To create an array create a variable and add the items you want wraped in the {'[  ]'} or leave it empty to create an empty array.
           <br/>
-          <span className={classes.light}>{'let emptyArr = [ ];'}</span>
+          <strong className={classes.code}>{'let emptyArr = [ ];'}</strong>
           <br/>
-          <span className={classes.light}>{'let arr = [1, 2, 3];'}</span>
+          <strong className={classes.code}>{'let arr = [1, 2, 3];'}</strong>
+          <br/>
           <br/>
           To find out how many elemnts your array has use the <strong className={classes.light}>.length</strong> on it.
           <br/>
+          <br/>
           NOTE1:
           <br/>
-          <span className={classes.light}>{'arr = [1, 2, 3];'}</span>
+          The length method return the number of elements in the array.
           <br/>
-          <span className={classes.light}>{'arr.length = 3'}</span>
+          <strong className={classes.code}>{'arr = [1, 2, 3];'}</strong>
           <br/>
-          that would return 3 as the length because the array has 3 elements.
+          <strong className={classes.code}>{'arr.length = 3'}</strong>
+          <br/>
           <br/>
           NOTE2:
           remember that arrays have index 0:
           <br/>
-          <span className={classes.light}>{'arr[0] = 1'}</span>
+          <strong className={classes.code}>{'arr[0] = 1'}</strong>
           <br/>
-          <span className={classes.light}>{'arr[3] = undefined'}</span>
+          <strong className={classes.code}>{'arr[3] = undefined'}</strong>
         </Typography>
       </Paper>
     </div>

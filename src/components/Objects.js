@@ -33,6 +33,12 @@ const styles = theme => ({
   dark: {
     color: "#00352c",
   },
+  code: {
+    color: "#5b874b",
+    textAlign: 'left',
+    fontFamily: "Courier New",
+    fontSize: 16,
+  },
 });
 
 const Objects = (props) => {
@@ -87,20 +93,20 @@ const Objects = (props) => {
           <Grid container spacing={24}>
             <Grid item xs={4}>
               <Typography className={classes.align} variant="body1" gutterBottom>
-                <span className={classes.dark}>
+                <span className={classes.code}>
                   {'var emptyObj1 = new Object( );'}
                   <br/>
                   <br/>
                 </span>
                 <Divider />
-                <span className={classes.dark}>
+                <span className={classes.code}>
                   <br/>
                   {'var emptyObj2 = { }'}
                   <br/>
                   <br/>
                 </span>
                 <Divider />
-                <span className={classes.dark}>
+                <span className={classes.code}>
                   <br/>
                   {'var objWithData = {'}
                   <br/>
@@ -152,23 +158,23 @@ const Objects = (props) => {
           <Grid container spacing={24}>
             <Grid item xs={4}>
               <Typography className={classes.align} variant="body1" gutterBottom>
-                <span className={classes.dark}>
+                <span className={classes.code}>
                   <br/>
-                  OPTION 1:
+                  &nbsp;&nbsp;OPTION 1:
                   <br/>
-                  {'myEmptyObj . a = 1;'}
-                  <br/>
-                  <br/>
-                  OPTION 2:
-                  <br/>
-                  {'myEmptyObj[ a ] = 1;'}
+                  &nbsp;&nbsp;{'myEmptyObj . a = 1;'}
                   <br/>
                   <br/>
-                  OPTION 3:
+                  &nbsp;&nbsp;OPTION 2:
                   <br/>
-                  {"var val = ' a '; "}
+                  &nbsp;&nbsp;{'myEmptyObj[ a ] = 1;'}
                   <br/>
-                  {"myEmptyObj[ ' val ' ] = 1;"}
+                  <br/>
+                  &nbsp;&nbsp;OPTION 3:
+                  <br/>
+                  &nbsp;&nbsp;{"var val = ' a '; "}
+                  <br/>
+                  &nbsp;&nbsp;{"myEmptyObj[ ' val ' ] = 1;"}
                   <br/>
                   <br/>
                 </span>

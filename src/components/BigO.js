@@ -28,6 +28,12 @@ const styles = theme => ({
   dark: {
     color: "#00352c",
   },
+  code: {
+    color: "#5b874b",
+    textAlign: 'left',
+    fontFamily: "Courier New",
+    fontSize: 16,
+  },
 });
 
 const BigO = (props) => {

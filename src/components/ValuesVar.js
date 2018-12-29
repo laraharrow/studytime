@@ -29,6 +29,12 @@ const styles = theme => ({
   dark: {
     color: "#00352c",
   },
+  code: {
+    color: "#5b874b",
+    textAlign: 'left',
+    fontFamily: "Courier New",
+    fontSize: 16,
+  },
 });
 
 const ValuesVar = (props) => {
@@ -62,7 +68,7 @@ const ValuesVar = (props) => {
         <Typography variant="body1" gutterBottom>
           <strong className={classes.light}>String:</strong> Are the type of value that represents text, and has to be wrapd in single or double quotes.
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             "I am a string"
             <br/>
             'also a string over here'
@@ -70,7 +76,7 @@ const ValuesVar = (props) => {
           <br/>
           <strong className={classes.light}>Number:</strong> Very self explanaroty this is JavaScript representation for any type of numeric values.
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             42
             &nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;
             -99
@@ -80,7 +86,7 @@ const ValuesVar = (props) => {
           <br/>
           <strong className={classes.light}>Boolean:</strong> Those are the two option values usually used as response to a compareson.
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             true&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;false
           </span>
           <br/>
@@ -95,7 +101,7 @@ const ValuesVar = (props) => {
           JavaScript has two main ways of comparaing values, one can be called loose comparaisson where you use double equals to compare elements, and the other can be called strict comparaisson using triple equal signs. The difference here is that with the loose equals == JS will convert one of the values, trying to find equality between them. While the strict equals === will do a deep compareson starting with the data type. One example of that would convertion would be comparing a string of a number agains a number of the same value:
           <br/>
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             1 == '1'  // returns true
             <br/>
             1 === '1'  // returns false
@@ -121,7 +127,7 @@ const ValuesVar = (props) => {
           JavaScript use variables to store values, so that you can acsses the value at any time. The way javascript does that is by using the keyword VAR in front of the name that will represent that value:
           <br/>
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             var foo = 123;
             <br/>
             var bar = '123';
@@ -131,10 +137,12 @@ const ValuesVar = (props) => {
           There it is two variables that now can be accessble and can be manipulated:
           <br/>
           <br/>
-          <span className={classes.dark}>
+          <span className={classes.code}>
             foo = foo * 2  // 246
             <br/>
-            bar = 'This is the old value of foo ' + bar; // This is the old value of foo 123
+            bar = 'This is the old value of foo ' + bar;
+            <br/>
+            // This is the old value of foo 123
           </span>
           <br/>
           <br/>
