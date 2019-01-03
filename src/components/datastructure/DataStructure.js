@@ -33,7 +33,7 @@ const theme = createMuiTheme({
   },
 });
 
-class LearnReact extends Component {
+class DataStructure extends Component {
 
   render() {
     const { classes } = this.props;
@@ -44,19 +44,19 @@ class LearnReact extends Component {
             variant="fab"
             color="secondary"
             className={classes.button}
-            onClick={e => this.props.manageJS('LearnReact')}
+            onClick={e => this.props.manageJS('DataStructure')}
           >
             close
           </Button>
-          <h1>Learning React</h1>
+          <h1>Data Structure</h1>
         </MuiThemeProvider>
       </div>
     )
   }
 };
 
-LearnReact.propTypes = {
+DataStructure.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(LearnReact);
+export default withStyles(styles)(DataStructure);

@@ -64,102 +64,15 @@ class Welcome extends Component {
                   1. Cover JavaScript fundamental consepts.
               </Typography>
               <Typography variant="button" gutterBottom color="primary">
-                  2. Work on challanges based on fundamentals.
+                  2. Understand Data Structures.
+              </Typography>
+              <Typography variant="button" gutterBottom color="primary">
+                  3. Work on Code Challanges - Algorithm Problems.
               </Typography>
             </CardContent>
           </MuiThemeProvider>
         </Card>
         <div className={classes.root}>
-          <Chip
-            label="JavaScript Basic consepts"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="String Manipulation"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="Array Manipulation"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="Object Manipulation"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="Sorting Algorithms"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="Big O"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="ES6"
-            onClick={e => move('JavaScript')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="React"
-            onClick={e => move('LearnReact')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
-          <Chip
-            label="Algorithms"
-            onClick={e => move('Challanges')}
-            className={classes.chip}
-            avatar={
-               <Avatar>
-                 <DoneIcon />
-               </Avatar>
-             }
-          />
           <Chip
             label="Design Architecture"
             onClick={e => move('Challanges')}

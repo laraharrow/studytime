@@ -78,9 +78,9 @@ const ValuesVar = (props) => {
           <br/>
           <span className={classes.code}>
             42
-            &nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;~&nbsp;&nbsp;
             -99
-            &nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;~&nbsp;&nbsp;
             0.765
           </span>
           <br/>

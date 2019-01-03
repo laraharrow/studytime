@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Welcome from './components/Welcome';
-import JavaScript from './components/Javascript';
-import Challanges from './components/Challanges';
-import LearnReact from './components/LearnReact';
+import JavaScript from './components/javascript/Javascript';
+import Challanges from './components/algorithms/Challanges';
+import DataStructure from './components/datastructure/DataStructure';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -44,10 +44,9 @@ class Home extends Component {
 
   state = {
     anchorEl: null,
-    title: 'choose topic',
     welcome: false,
     JavaScript: true,
-    LearnReact: true,
+    DataStructure: true,
     Challanges: true,
   };
 
@@ -56,15 +55,45 @@ class Home extends Component {
     this.setState({ anchorEl: event.currentTarget });
   };
 
-  handleMenuClick = (value) => {
+  handleCloseButton = () => {
     this.setState({
       anchorEl: null,
-      welcome: !this.state.welcome,
-      [value]: !this.state[value]
+      welcome: false,
+      JavaScript: true,
+      DataStructure: true,
+      Challanges: true,
     });
+  }
+
+  handleMenuClick = (value) => {
+    if (value === 'JavaScript') {
+      this.setState({
+        anchorEl: null,
+        welcome: true,
+        JavaScript: false,
+        DataStructure: true,
+        Challanges: true,
+      });
+    }
+    if (value === 'DataStructure') {
+      this.setState({
+        anchorEl: null,
+        welcome: true,
+        JavaScript: true,
+        DataStructure: false,
+        Challanges: true,
+      });
+    }
+    if (value === 'Challanges') {
+      this.setState({
+        anchorEl: null,
+        welcome: true,
+        JavaScript: true,
+        DataStructure: true,
+        Challanges: false,
+      });
+    }
   };
-
-
 
   render() {
     const { classes } = this.props;
@@ -91,17 +120,17 @@ class Home extends Component {
                 open={Boolean(anchorEl)}
               >
                 <MenuItem
-                  onClick={e => this.handleMenuClick('JavaScript')}
+                  onClick={e => this.handleMenuClick("JavaScript")}
                 >
-                  JavaScript
+                  JS Consepts
                 </MenuItem>
                 <MenuItem
-                  onClick={e => this.handleMenuClick('LearnReact')}
+                  onClick={e => this.handleMenuClick("DataStructure")}
                 >
-                  React
+                  Data Structures
                 </MenuItem>
                 <MenuItem
-                  onClick={e => this.handleMenuClick('Challanges')}
+                  onClick={e => this.handleMenuClick("Challanges")}
                 >
                   Challanges
                 </MenuItem>
@@ -116,9 +145,9 @@ class Home extends Component {
           {!this.state.welcome && <Welcome move={this.handleMenuClick}/>}
         </div>
         <div>
-          {!this.state.JavaScript && <JavaScript manageJS={this.handleMenuClick} />}
-          {!this.state.LearnReact && <LearnReact manageJS={this.handleMenuClick} />}
-          {!this.state.Challanges && <Challanges manageJS={this.handleMenuClick} />}
+          {!this.state.JavaScript && <JavaScript manageJS={this.handleCloseButton} />}
+          {!this.state.DataStructure && <DataStructure manageJS={this.handleCloseButton} />}
+          {!this.state.Challanges && <Challanges manageJS={this.handleCloseButton} />}
 
         </div>
       </div>

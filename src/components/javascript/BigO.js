@@ -9,9 +9,10 @@ import Divider from '@material-ui/core/Divider';
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    width: '800px',
+    padding: theme.spacing.unit * 2,
+    align: 'center',
+    display:'inline-block',
+    width: '75%',
     marginBottom: '25px',
   },
   align: {
@@ -42,7 +43,15 @@ const BigO = (props) => {
   return (
     <div>
       <Paper className={classes.root} elevation={1}>
-        oi
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
+        Oh the sweet big O and its times and space kfadf adfgmadf adfgdfg adfgadfg adfgadfg hjujeth fnnyrtgd dfghntyhjty dfgsh fghrhrtbfg
       </Paper>
     </div>
   )
