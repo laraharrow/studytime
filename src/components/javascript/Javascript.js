@@ -4,7 +4,9 @@ import Objects from './Objects';
 import Arrays from './Arrays';
 import ES6 from './ES6';
 import BigO from './BigO';
-import PrototypeClasses from './PrototypeClasses'
+import PrototypeClasses from './PrototypeClasses';
+import Promise from './Promise';
+import Recursion from './Recursion';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -58,6 +60,8 @@ class Javascript extends Component {
     openES6: true,
     openBigO: true,
     openPrototypeClasses: true,
+    openPromise: true,
+    openRecursion: true,
   };
 
   handleClose = () => {
@@ -68,6 +72,8 @@ class Javascript extends Component {
       openES6: true,
       openBigO: true,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -79,6 +85,8 @@ class Javascript extends Component {
       openES6: true,
       openBigO: true,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -90,6 +98,8 @@ class Javascript extends Component {
       openES6: true,
       openBigO: true,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -101,6 +111,8 @@ class Javascript extends Component {
       openES6: true,
       openBigO: true,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -112,6 +124,8 @@ class Javascript extends Component {
       openES6: false,
       openBigO: true,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -123,6 +137,8 @@ class Javascript extends Component {
       openES6: true,
       openBigO: false,
       openPrototypeClasses: true,
+      openPromise: true,
+      openRecursion: true,
     })
   }
 
@@ -134,6 +150,34 @@ class Javascript extends Component {
         openES6: true,
         openBigO: true,
         openPrototypeClasses: false,
+        openPromise: true,
+        openRecursion: true,
+      })
+    }
+
+    handlePromise = () => {
+      this.setState({
+        openValuesVar: true,
+        openObjects: true,
+        openArrays: true,
+        openES6: true,
+        openBigO: true,
+        openPrototypeClasses: true,
+        openPromise: false,
+        openRecursion: true,
+      })
+    }
+
+    handleRecursion = () => {
+      this.setState({
+        openValuesVar: true,
+        openObjects: true,
+        openArrays: true,
+        openES6: true,
+        openBigO: true,
+        openPrototypeClasses: true,
+        openPromise: true,
+        openRecursion: false,
       })
     }
 
@@ -154,54 +198,70 @@ class Javascript extends Component {
           <div>
             <div className={classes.root}>
               <div className={classes.label}>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handleValuesVar}
-                  >
-                    values + variables
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handleObjects}
-                  >
-                    objects
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handleArrays}
-                  >
-                    array
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handleES6}
-                  >
-                    ES6
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handleBigO}
-                  >
-                    Big O
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={classes.button}
-                    onClick={this.handlePrototypeClasses}
-                  >
-                    Prototype + Classes
-                  </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleValuesVar}
+                >
+                  values + variables
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleArrays}
+                >
+                  array
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleObjects}
+                >
+                  objects
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleES6}
+                >
+                  ES6
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handlePrototypeClasses}
+                >
+                  Prototype + Classes
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handlePromise}
+                >
+                  Promise
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleRecursion}
+                >
+                  Recursion
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  onClick={this.handleBigO}
+                >
+                  Big O
+                </Button>
               </div>
             </div>
             <br/>
@@ -212,6 +272,8 @@ class Javascript extends Component {
               {!this.state.openES6 && <ES6 close={this.handleClose}/>}
               {!this.state.openBigO && <BigO close={this.handleClose}/>}
               {!this.state.openPrototypeClasses && <PrototypeClasses close={this.handleClose}/>}
+              {!this.state.openPromise && <Promise close={this.handleClose}/>}
+              {!this.state.openRecursion && <Recursion close={this.handleClose}/>}
             </div>
           </div>
         </MuiThemeProvider>
