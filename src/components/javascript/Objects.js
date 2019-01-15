@@ -69,6 +69,8 @@ const Objects = (props) => {
         </Typography>
         <br/>
         <Divider />
+        <br/>
+        <br/>
         <Typography className={classes.align} variant="body1" gutterBottom>
           <br/>
           <strong  className={classes.light}>
@@ -82,7 +84,11 @@ const Objects = (props) => {
           <br/>
           {"<obj's name> . "}<strong className={classes.light}>hasOwnProperty</strong>{" ( <obj's key> )"} &nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp; returns a boolean if the object has the passed key.
         </Typography>
+        <br/>
+        <br/>
         <Divider />
+        <br/>
+        <br/>
         <Typography className={classes.light} variant="body1" gutterBottom>
           <br/>
           CREATING AND MANIPULATING AN OBJECT:
@@ -97,15 +103,15 @@ const Objects = (props) => {
                   {'var emptyObj1 = new Object( );'}
                   <br/>
                   <br/>
+                  <br/>
                 </span>
-                <Divider />
                 <span className={classes.code}>
                   <br/>
-                  {'var emptyObj2 = { }'}
+                  {'var emptyObj2 = { };'}
+                  <br/>
                   <br/>
                   <br/>
                 </span>
-                <Divider />
                 <span className={classes.code}>
                   <br/>
                   {'var objWithData = {'}
@@ -120,7 +126,7 @@ const Objects = (props) => {
                   <br/>
                   &nbsp;&nbsp;&nbsp;{'1: false,'}
                   <br/>
-                  {'}'}
+                  {'};'}
                 </span>
               </Typography>
             </Grid>
@@ -146,7 +152,11 @@ const Objects = (props) => {
             </Grid>
           </Grid>
         </div>
+        <br/>
+        <br/>
         <Divider />
+        <br/>
+        <br/>
         <Typography  variant="button" gutterBottom>
           <br/>
           <br/>

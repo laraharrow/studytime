@@ -51,7 +51,27 @@ const Promise = (props) => {
         >
           X
         </Button>
-        Promise - Async Await
+        PROMISE - ASYNC | AWAIT
+        <Typography className={classes.light} variant="h5" component="h3">
+          Before we get into how we use <strong className={classes.light}> Promises </strong> and why we will use <strong className={classes.light}> Async | Await </strong> (ES6) instead. We need to understand the problem that they are solving.
+          <br/>
+          <br/>
+          <Divider />
+          <br/>
+          <br/>
+          <strong className={classes.dark}> ASYNCHRONOUS FUNCTIONS </strong>
+          <br/>
+          <br/>
+          
+
+
+
+          <strong className={classes.light}> ProtoType </strong>
+          <strong className={classes.dark}> PROTOTYPE </strong>
+          <strong className={classes.code}>&nbsp;{`obj.toString();`}</strong>
+          <br/>
+          <span className={classes.code}>&nbsp;{`// [object Object]`}</span>
+        </Typography>
       </Paper>
     </div>
   )

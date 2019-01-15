@@ -314,8 +314,6 @@ const PrototypeClasses = (props) => {
           4. Finally we are adding anew property to our class.
           <br/>
           <br/>
-
-
         </Typography>
       </Paper>
     </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Welcome from './components/Welcome';
 import JavaScript from './components/javascript/Javascript';
 import Challanges from './components/algorithms/Challanges';
-import DataStructure from './components/datastructure/DataStructure';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -125,11 +124,6 @@ class Home extends Component {
                   JS Consepts
                 </MenuItem>
                 <MenuItem
-                  onClick={e => this.handleMenuClick("DataStructure")}
-                >
-                  Data Structures
-                </MenuItem>
-                <MenuItem
                   onClick={e => this.handleMenuClick("Challanges")}
                 >
                   Challanges
@@ -146,7 +140,6 @@ class Home extends Component {
         </div>
         <div>
           {!this.state.JavaScript && <JavaScript manageJS={this.handleCloseButton} />}
-          {!this.state.DataStructure && <DataStructure manageJS={this.handleCloseButton} />}
           {!this.state.Challanges && <Challanges manageJS={this.handleCloseButton} />}
 
         </div>
