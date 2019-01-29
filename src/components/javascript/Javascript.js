@@ -217,7 +217,7 @@ class Javascript extends Component {
             className={classes.button}
             onClick={e => this.props.manageJS('JavaScript')}
           >
-            close
+            Home
           </Button>
           <h1>Learning JavaScript</h1>
           <div>

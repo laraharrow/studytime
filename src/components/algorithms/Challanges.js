@@ -46,7 +46,7 @@ class Challanges extends Component {
             className={classes.button}
             onClick={e => this.props.manageJS('Challanges')}
           >
-            close
+            Home
           </Button>
           <h1>Challanges</h1>
         </MuiThemeProvider>
