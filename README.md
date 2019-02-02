@@ -9,4 +9,8 @@
 
 ~ This will open http://localhost:3000 in the browser.<br><br><br>
 
+- To see the deployed version:
+
+~ https://js-react-study.herokuapp.com/
+
 ### After I'm done with the JS portion, I want to do the same with React
