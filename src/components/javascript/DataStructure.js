@@ -998,11 +998,11 @@ const DataStructure = (props) => {
 
 
 
-            <span className={classes.code}>&nbsp;{`b`}</span>
+            <span className={classes.code}>&nbsp;{``}</span>
 
-            <strong className={classes.light}> d </strong>
-            <strong className={classes.code}>&nbsp;{`c`}</strong>
-            <span className={classes.code}>&nbsp;{`b`}</span>
+            <strong className={classes.light}>  </strong>
+            <strong className={classes.code}>&nbsp;{``}</strong>
+            <span className={classes.code}>&nbsp;{``}</span>
             <br/>
             <br/>
           </Typography>
