@@ -74,7 +74,37 @@ class Welcome extends Component {
         </Card>
         <div className={classes.root}>
           <Chip
-            label="Design Architecture"
+            label="JavaScript"
+            onClick={e => move('JavaScript')}
+            className={classes.chip}
+            avatar={
+               <Avatar>
+                 <DoneIcon />
+               </Avatar>
+             }
+          />
+          <Chip
+            label="Data Structure"
+            onClick={e => move('DataStructure')}
+            className={classes.chip}
+            avatar={
+               <Avatar>
+                 <DoneIcon />
+               </Avatar>
+             }
+          />
+          <Chip
+            label="React"
+            onClick={e => move('LearnReact')}
+            className={classes.chip}
+            avatar={
+               <Avatar>
+                 <DoneIcon />
+               </Avatar>
+             }
+          />
+          <Chip
+            label="Challanges"
             onClick={e => move('Challanges')}
             className={classes.chip}
             avatar={

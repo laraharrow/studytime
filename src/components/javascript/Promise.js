@@ -51,27 +51,11 @@ const Promise = (props) => {
         >
           X
         </Button>
-        PROMISE - ASYNC | AWAIT
-        <Typography className={classes.light} variant="h5" component="h3">
-          Before we get into how we use <strong className={classes.light}> Promises </strong> and why we will use <strong className={classes.light}> Async | Await </strong> (ES6) instead. We need to understand the problem that they are solving.
-          <br/>
-          <br/>
-          <Divider />
-          <br/>
-          <br/>
-          <strong className={classes.dark}> ASYNCHRONOUS FUNCTIONS </strong>
-          <br/>
-          <br/>
-          
-
-
-
-          <strong className={classes.light}> ProtoType </strong>
-          <strong className={classes.dark}> PROTOTYPE </strong>
-          <strong className={classes.code}>&nbsp;{`obj.toString();`}</strong>
-          <br/>
-          <span className={classes.code}>&nbsp;{`// [object Object]`}</span>
+        <Typography className={classes.align} variant="body1" gutterBottom>
+          This page will be updated with some new information soon.
         </Typography>
+        <br/>
+        <br/>
       </Paper>
     </div>
   )
@@ -82,3 +66,30 @@ Promise.propTypes = {
 };
 
 export default withStyles(styles)(Promise);
+
+
+// PROMISE - ASYNC | AWAIT
+// <Typography className={classes.light} variant="h5" component="h3">
+//   Before we get into how we use <strong className={classes.light}> Promises </strong> and why we will use <strong className={classes.light}> Async | Await </strong> (ES6) instead. We need to understand the problem that they are solving.
+//   <br/>
+//   <br/>
+//   <Divider />
+//   <br/>
+//   <br/>
+//   <strong className={classes.dark}> ASYNCHRONOUS FUNCTIONS </strong>
+//   <br/>
+//   <br/>
+//   <strong className={classes.light}> ProtoType </strong>
+//   <strong className={classes.dark}> PROTOTYPE </strong>
+//   <strong className={classes.code}>&nbsp;{`obj.toString();`}</strong>
+//   <br/>
+//   <span className={classes.code}>&nbsp;{`// [object Object]`}</span>
+// </Typography>
+// <Button
+//   variant="fab"
+//   color="secondary"
+//   className={classes.button}
+//   onClick={close}
+// >
+//   X
+// </Button>

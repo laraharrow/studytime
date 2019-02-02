@@ -7,7 +7,6 @@ import BigO from './BigO';
 import PrototypeClasses from './PrototypeClasses';
 import Promise from './Promise';
 import Recursion from './Recursion';
-import DataStructure from './DataStructure';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -63,7 +62,6 @@ class Javascript extends Component {
     openPrototypeClasses: true,
     openPromise: true,
     openRecursion: true,
-    openDataStructure: true,
   };
 
   handleClose = () => {
@@ -76,7 +74,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
     })
   }
 
@@ -90,7 +87,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
     })
   }
 
@@ -104,7 +100,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
     })
   }
 
@@ -118,21 +113,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
-    })
-  }
-
-  handleDataStructure = () => {
-    this.setState({
-      openValuesVar: true,
-      openObjects: true,
-      openArrays: true,
-      openES6: true,
-      openBigO: true,
-      openPrototypeClasses: true,
-      openPromise: true,
-      openRecursion: true,
-      openDataStructure: false,
     })
   }
 
@@ -146,7 +126,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
     })
   }
 
@@ -160,7 +139,6 @@ class Javascript extends Component {
       openPrototypeClasses: true,
       openPromise: true,
       openRecursion: true,
-      openDataStructure: true,
     })
   }
 
@@ -174,7 +152,6 @@ class Javascript extends Component {
         openPrototypeClasses: false,
         openPromise: true,
         openRecursion: true,
-        openDataStructure: true,
       })
     }
 
@@ -188,7 +165,6 @@ class Javascript extends Component {
         openPrototypeClasses: true,
         openPromise: false,
         openRecursion: true,
-        openDataStructure: true,
       })
     }
 
@@ -202,7 +178,6 @@ class Javascript extends Component {
         openPrototypeClasses: true,
         openPromise: true,
         openRecursion: false,
-        openDataStructure: true,
       })
     }
 
@@ -215,7 +190,7 @@ class Javascript extends Component {
             variant="fab"
             color="secondary"
             className={classes.button}
-            onClick={e => this.props.manageJS('JavaScript')}
+            onClick={e => this.props.backHome()}
           >
             Home
           </Button>
@@ -246,14 +221,6 @@ class Javascript extends Component {
                   onClick={this.handleObjects}
                 >
                   Objects
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  className={classes.button}
-                  onClick={this.handleDataStructure}
-                >
-                  DataStructure
                 </Button>
                 <Button
                   variant="outlined"
@@ -302,7 +269,6 @@ class Javascript extends Component {
               {!this.state.openValuesVar && <ValuesVar close={this.handleClose}/>}
               {!this.state.openArrays && <Arrays close={this.handleClose}/>}
               {!this.state.openObjects && <Objects close={this.handleClose}/>}
-              {!this.state.openDataStructure && <DataStructure close={this.handleClose} openBigO={this.handleBigO}/>}
               {!this.state.openES6 && <ES6 close={this.handleClose}/>}
               {!this.state.openBigO && <BigO close={this.handleClose}/>}
               {!this.state.openPrototypeClasses && <PrototypeClasses close={this.handleClose}/>}

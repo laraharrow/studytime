@@ -206,6 +206,14 @@ const Objects = (props) => {
             </Grid>
           </Grid>
         </div>
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
       </Paper>
     </div>
   );

@@ -170,6 +170,14 @@ const Arrays = (props) => {
           <br/>
           <strong className={classes.code}>{'arr[3] = undefined'}</strong>
         </Typography>
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
       </Paper>
     </div>
   );

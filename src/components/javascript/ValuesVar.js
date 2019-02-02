@@ -150,6 +150,14 @@ const ValuesVar = (props) => {
           <br/>
           On the second example we are adding some text to our string stored under the variable bar, basically we are addting new text to the value of the variable bar and keeping the original value as part of it.
         </Typography>
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
       </Paper>
     </div>
   );

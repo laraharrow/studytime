@@ -315,6 +315,14 @@ const PrototypeClasses = (props) => {
           <br/>
           <br/>
         </Typography>
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
       </Paper>
     </div>
   )

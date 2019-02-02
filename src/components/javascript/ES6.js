@@ -879,6 +879,14 @@ const ES6 = (props) => {
           <br/>
           <br/>
         </Typography>
+        <Button
+          variant="fab"
+          color="secondary"
+          className={classes.button}
+          onClick={close}
+        >
+          X
+        </Button>
       </Paper>
     </div>
   );

@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+
 
 const styles = theme => ({
   button: {
@@ -44,11 +48,14 @@ class Challanges extends Component {
             variant="fab"
             color="secondary"
             className={classes.button}
-            onClick={e => this.props.manageJS('Challanges')}
+            onClick={e => this.props.backHome()}
           >
             Home
           </Button>
           <h1>Challanges</h1>
+          <Typography className={classes.align} variant="body1" gutterBottom>
+            This page will be updated with some new information soon.
+          </Typography>
         </MuiThemeProvider>
       </div>
     )

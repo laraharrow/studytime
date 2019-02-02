@@ -51,7 +51,11 @@ const Recursion = (props) => {
         >
           X
         </Button>
-         Recursion and its times and space kfadf adfgmadf adfgdfg adfgadfg adfgadfg hjujeth fnnyrtgd dfghntyhjty dfgsh fghrhrtbfg
+        <Typography className={classes.align} variant="body1" gutterBottom>
+          This page will be updated with some new information soon.
+        </Typography>
+        <br/>
+        <br/>
       </Paper>
     </div>
   )

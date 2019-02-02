@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
@@ -39,7 +37,7 @@ const styles = theme => ({
   },
 });
 
-const BigO = (props) => {
+const Intro = (props) => {
   const { classes, close } = props;
 
   return (
@@ -55,7 +53,7 @@ const BigO = (props) => {
         </Button>
         <Typography className={classes.align} variant="body1" gutterBottom>
           This page will be updated with some new information soon.
-        </Typography>  
+        </Typography>
         <br/>
         <br/>
       </Paper>
@@ -63,8 +61,8 @@ const BigO = (props) => {
   )
 }
 
-BigO.propTypes = {
+Intro.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(BigO);
+export default withStyles(styles)(Intro);

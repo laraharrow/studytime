@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Welcome from './components/Welcome';
 import JavaScript from './components/javascript/Javascript';
-import Challanges from './components/algorithms/Challanges';
+import DataStructure from './components/datastructure/DataStructure';
+import LearnReact from './components/react/LearnReact';
+import Challanges from './components/challanges/Challanges';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -46,6 +48,7 @@ class Home extends Component {
     welcome: false,
     JavaScript: true,
     DataStructure: true,
+    LearnReact: true,
     Challanges: true,
   };
 
@@ -60,6 +63,7 @@ class Home extends Component {
       welcome: false,
       JavaScript: true,
       DataStructure: true,
+      LearnReact: true,
       Challanges: true,
     });
   }
@@ -71,6 +75,7 @@ class Home extends Component {
         welcome: true,
         JavaScript: false,
         DataStructure: true,
+        LearnReact: true,
         Challanges: true,
       });
     }
@@ -80,6 +85,17 @@ class Home extends Component {
         welcome: true,
         JavaScript: true,
         DataStructure: false,
+        LearnReact: true,
+        Challanges: true,
+      });
+    }
+    if (value === 'LearnReact') {
+      this.setState({
+        anchorEl: null,
+        welcome: true,
+        JavaScript: true,
+        LearnReact: false,
+        DataStructure: true,
         Challanges: true,
       });
     }
@@ -89,6 +105,7 @@ class Home extends Component {
         welcome: true,
         JavaScript: true,
         DataStructure: true,
+        LearnReact: true,
         Challanges: false,
       });
     }
@@ -124,6 +141,16 @@ class Home extends Component {
                   JS Consepts
                 </MenuItem>
                 <MenuItem
+                  onClick={e => this.handleMenuClick("DataStructure")}
+                >
+                  Data Structure
+                </MenuItem>
+                <MenuItem
+                  onClick={e => this.handleMenuClick("LearnReact")}
+                >
+                  React
+                </MenuItem>
+                <MenuItem
                   onClick={e => this.handleMenuClick("Challanges")}
                 >
                   Challanges
@@ -139,8 +166,10 @@ class Home extends Component {
           {!this.state.welcome && <Welcome move={this.handleMenuClick}/>}
         </div>
         <div>
-          {!this.state.JavaScript && <JavaScript manageJS={this.handleCloseButton} />}
-          {!this.state.Challanges && <Challanges manageJS={this.handleCloseButton} />}
+          {!this.state.JavaScript && <JavaScript backHome={this.handleCloseButton} />}
+          {!this.state.DataStructure && <DataStructure backHome={this.handleCloseButton} />}
+          {!this.state.LearnReact && <LearnReact backHome={this.handleCloseButton} />}
+          {!this.state.Challanges && <Challanges backHome={this.handleCloseButton} />}
 
         </div>
       </div>
