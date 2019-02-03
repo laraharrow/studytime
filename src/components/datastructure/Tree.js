@@ -13,7 +13,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     align: 'center',
     display:'inline-block',
-    width: '75%',
+    width: '95%',
     marginBottom: '25px',
   },
   paper: {
@@ -186,6 +186,29 @@ const Tree = (props) => {
           <span className={classes.code}>&nbsp;{` After that we are checking if the parent at that time has a child tree if not we just make the new tree to be placed aas a child of the parent tree at that point, left or right based on the size of data compared with theparent data.`}</span>
           <br/>
           <span className={classes.code}>&nbsp;{` Otherwise we recursively call contains having the tree at left or right as the root node (this). That recursion will happend until we find the position where a tree with that data value exists or until we hit an empty child spot.`}</span>
+          <br/>
+          <span className={classes.code}>&nbsp;{`*/`}</span>
+          <br/>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;{`remove(data) {`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`if (data = this.data) return true;`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`if (data < this.data) {`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`this.left ? return this.left.contains(data) : return false;`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`} else {`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`this.right ? return this.right.contains(data) : return false;`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`}`}</strong>
+          <br/>
+          <strong className={classes.code}>&nbsp;&nbsp;&nbsp;{`};`}</strong>
+          <br/>
+          <span className={classes.code}>&nbsp;{`/*`}</span>
+          <br/>
+          <span className={classes.code}>&nbsp;{` `}</span>
           <br/>
           <span className={classes.code}>&nbsp;{`*/`}</span>
           <br/>

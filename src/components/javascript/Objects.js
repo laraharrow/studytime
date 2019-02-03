@@ -13,7 +13,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     align: 'center',
     display:'inline-block',
-    width: '75%',
+    width: '95%',
     marginBottom: '25px',
   },
   grid: {

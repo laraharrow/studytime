@@ -14,7 +14,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     align: 'center',
     display:'inline-block',
-    width: '75%',
+    width: '95%',
     marginBottom: '25px',
   },
   align: {
@@ -55,7 +55,7 @@ const BigO = (props) => {
         </Button>
         <Typography className={classes.align} variant="body1" gutterBottom>
           This page will be updated with some new information soon.
-        </Typography>  
+        </Typography>
         <br/>
         <br/>
       </Paper>
